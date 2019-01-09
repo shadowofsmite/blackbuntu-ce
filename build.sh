@@ -188,10 +188,7 @@ stage_output "Switched to Root successfully"
 (( STAGE++ ))
 stage_title $STAGE $TOTAL "Installing Ubuntu Make"
 
-if [ ! -f "/etc/blackbuntu/installed/ubuntu-make.txt" ];
-then
-  sudo add-apt-repository ppa:lyzardking/ubuntu-make
-  sudo apt-get update
-  sudo apt-get install ubuntu-make
-  sudo date +"%Y%m%d%H%M%S" | sudo tee /etc/blackbuntu/installed/ubuntu-make.txt >/dev/null 2>&1
-fi
+sudo add-apt-repository ppa:lyzardking/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+sudo date +"%Y%m%d%H%M%S" | sudo tee /etc/blackbuntu/installed/ubuntu-make.txt >/dev/null 2>&1
