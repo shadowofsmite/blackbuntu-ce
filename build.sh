@@ -188,7 +188,7 @@ stage_output "Switched to Root successfully"
 (( STAGE++ ))
 stage_title $STAGE $TOTAL "Installing Git"
 
-if [ ! -f "/etc/blackbuntu/installed/ubuntu-make.txt" ];
+if [ ! -f "/etc/blackbuntu/installed/git.txt" ];
 then
   sudo apt-get install git
   sudo date +"%Y%m%d%H%M%S" | sudo tee /etc/blackbuntu/installed/git.txt >/dev/null 2>&1
